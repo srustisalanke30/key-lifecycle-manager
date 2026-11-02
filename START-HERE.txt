@@ -1,0 +1,31 @@
+KEYKEEPER — KEY LIFECYCLE MANAGER DEMO
+
+WHAT YOU NEED
+- Node.js (already available on this computer)
+- Any modern browser
+
+HOW TO RUN
+1. Open this folder in File Explorer.
+2. Double-click start.bat. If Windows asks, allow the command window to run.
+3. It starts a separate minimized server window, checks that it responds, then opens http://127.0.0.1:8765 in your browser.
+4. Keep the minimized “KeyKeeper server” window open while using the project. Close it when finished.
+
+SUGGESTED LIVE DEMO (about 2 minutes)
+1. Point out the automatically generated AES-256-GCM key in the key vault.
+2. Type a short message and click “Encrypt message.” Explain that ciphertext is unreadable without the correct key.
+3. Click “Decrypt with selected key” to show the original message returns.
+4. Click “Rotate active key.” Show that the old key becomes Rotated and a fresh key becomes Active.
+5. Encrypt another message with the new key. Use the key selector to choose the old key and decrypt the earlier message.
+6. Click “Expire” on the active key, then show it can no longer be used for new encryption. The audit trail records the actions.
+
+PROJECT TOPIC
+Key Lifecycle Management using AES-GCM: key generation, use, rotation, expiry/deactivation, and audit logging.
+
+TECHNOLOGY
+HTML, CSS, JavaScript, Node.js local server, and the browser Web Crypto API.
+
+DEMO LIMITATIONS
+This is a classroom prototype. Keys live only in browser memory and disappear when the page is refreshed or closed. The interface simulates expiry/deactivation; it is not a production key management service. AES-GCM is performed by the browser's built-in cryptography, not a student-written cipher.
+
+TO CHANGE THE PROJECT
+Edit index.html for page content, styles.css for design, and app.js for behavior. Save, then refresh the browser page.
